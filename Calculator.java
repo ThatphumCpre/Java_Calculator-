@@ -62,12 +62,12 @@ public class Calculator{
 
         JButton button8 = new JButton("8");
         button8.setBounds(120,120+100,100,40);
-        button8.setActionCommand("1");
+        button8.setActionCommand("8");
         button8.addActionListener(new ButtonClickListener());
 
         JButton button9 = new JButton("9");
         button9.setBounds(230,120+100,100,40);
-        button9.setActionCommand("1");
+        button9.setActionCommand("9");
         button9.addActionListener(new ButtonClickListener());
 
         JButton button0 = new JButton("0");
