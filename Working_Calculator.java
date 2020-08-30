@@ -90,6 +90,31 @@ public class Working_Calculator{
         }
     }
 
+    public float Calculate(){
+        number2 = Float.parseFloat(equation.substring(number2_index));
+        
+        if (operator == "+"){
+            result = number1 + number2;
+            number2 = 0;
+            return  result;
+        }
+        else if (operator == "-"){
+            result = number1 - number2;
+            number2 = 0;
+            return  result;
+        }
+        else if (operator == "*"){
+            result = number1 * number2;
+            number2 = 0;
+            return  result;
+        }
+        else{
+            result = number1 / number2;
+            number2 = 0;
+            return  result;
+        }
+    }
+
     private class ButtonClickListener implements ActionListener{
        public void actionPerformed(ActionEvent e) { //overide method
             String input = e.getActionCommand(); //read getActionCommand attribute
@@ -183,6 +208,12 @@ public class Working_Calculator{
                             display.setText(equation);
                         }
                     }
+                }
+            }
+            else if (input == "="){
+                if (equation != ""){
+                    equation = Float.toString(Calculate());
+                    display.setText(equation);
                 }
             }
             else {
